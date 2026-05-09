@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia - Museo Nacional del Ecuador</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="barra-superior">
+        <div class="logo">
+            <h1>MUSEO NACIONAL DEL ECUADOR</h1>
+        </div>
+        <div class="utilidades">
+            <select class="selector-idioma">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+            <div class="redes-sociales">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navegacion-principal">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="historia.html" class="activo">Historia</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+            <li><a href="evaluacion.html">Evaluación </a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container historia-seccion">
+    <div class="row">
+        <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="sticky-top imagen-fija" data-aos="fade-right">
+                <img src="../img/historia.jpg" alt="Historia del Museo Nacional" class="img-fluid rounded shadow-sm">
+            </div>
+        </div>
+
+        <div class="col-lg-7 texto-historia">
+            <h2 data-aos="fade-up">Historia del Museo</h2>
+
+            <div data-aos="fade-up">
+                <h3>Inicios (1939-1969)</h3>
+                <p>Hacia 1927, durante el gobierno del Dr. Isidro Ayora, llegó al país la misión económica estadounidense Kemmerer, la cual planteó la importancia de la creación de una banca nacional que se encargue de la política económica y monetaria del Ecuador. Como en ese tiempo se le obligaba al Estado a tener el 50 por ciento de la reserva monetaria respaldada en oro, muchas piezas de origen prehispánico fueron adquiridas por la institución. Sin embargo, hacia 1946, la labor del Dr. Julio Aráuz que se desempeñaba como químico del Banco Central del Ecuador, permitió que estos objetos se conservaran.</p>
+                <p>La entrada al Museo está ubicada al costado norte del Edificio de los espejos de la Casa de la Cultura Ecuatoriana. Este fue el origen de la primera colección del variado y rico patrimonio cultural que actualmente conserva el Museo...</p>
+            </div>
+
+            <div data-aos="fade-up">
+                <h3>Primera Etapa (1970 - 1990)</h3>
+                <p>Durante las décadas de 1970 a 1990, el Museo Nacional se convirtió en el eje dinamizador de la cultura y la educación patrimonial en el país...</p>
+            </div>
+
+            <div data-aos="fade-up">
+                <h3>Segunda Etapa (1990-2010)</h3>
+                <p>Una serie de acontecimientos políticos y económicos del país afectaron la continua labor del museo hasta cerrar sus puertas en 1991...</p>
+            </div>
+
+            <div data-aos="fade-up">
+                <h3>Tercera Etapa (Del 2010 en adelante)</h3>
+                <p>Bajo la presidencia del economista Rafael Correa Delgado, el 15 de enero de 2007 se creó el Ministerio de Cultura con el propósito de que se encargue de las funciones que antes correspondían a la Subsecretaría de Cultura...</p>
+            </div>
+
+            <div class="more-info-link" data-aos="fade-up">
+                <a href="https://es.wikipedia.org/wiki/Museo_Nacional_del_Ecuador#" target="_blank">Para más información, haz clic aquí</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <!-- Footer content remains the same -->
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+</script>
+<script src="../js/scripts.js"></script>
+</body>
+</html>
