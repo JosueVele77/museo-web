@@ -98,69 +98,74 @@ header {
     border-bottom-color: #d4a017;
 }
 
-/* ================= Contenido Historia ================= */
-.historia-info {
-    padding: 50px 15%;
+/* ================= Contenido Ubicación ================= */
+.ubicacion-info {
+    padding: 50px 0;
     background-color: #fff;
-    line-height: 1.8;
 }
 
-.historia-info h2 {
+.ubicacion-info .display-4 {
+    font-size: 3rem;
+    color: #d4a017 !important;
+}
+
+.ubicacion-info h2 {
     font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
     font-weight: 700;
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.historia-info p {
-    font-size: 1.1rem;
-    color: #555;
+    margin-top: 10px;
     margin-bottom: 20px;
-    text-align: justify;
 }
 
-.historia-info .imagen-historia {
-    width: 100%;
-    height: auto;
-    margin: 30px 0;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.galeria-historia {
+.mapa-container {
     margin: 40px 0;
-}
-
-.galeria-historia img {
-    border-radius: 5px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.galeria-historia img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.more-info-link {
-    text-align: center;
+.info-transporte {
     margin-top: 40px;
 }
 
-.more-info-link a {
-    font-weight: bold;
-    color: #d4a017;
-    text-decoration: none;
-    border-bottom: 2px solid #d4a017;
-    padding-bottom: 3px;
-    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+.info-transporte h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
 }
 
-.more-info-link a:hover {
+.info-transporte p, .info-transporte ul {
+    color: #555;
+    line-height: 1.7;
+}
+
+.info-transporte ul {
+    padding-left: 20px;
+}
+
+.info-transporte .bi {
+    margin-right: 10px;
+    color: #d4a017;
+}
+
+.proximamente-section {
+    background-color: #f8f9fa;
+    padding: 40px;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.proximamente-section h3 {
+    font-family: 'Cinzel', serif;
     color: #333;
-    border-bottom-color: #333;
+}
+
+.proximamente-section p {
+    color: #555;
+    max-width: 600px;
+    margin: 15px auto 25px;
 }
 
 /* ================= Pie de página ================= */
