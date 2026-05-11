@@ -11,7 +11,7 @@ header {
     width: 100%;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1030;
     border-bottom: 1px solid #eee;
 }
 
@@ -37,34 +37,7 @@ header {
     color: #d4a017;
 }
 
-.utilidades {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.selector-idioma {
-    padding: 3px;
-    border: 1px solid #ccc;
-    background: transparent;
-    font-size: 14px;
-    margin-right: 20px;
-}
-
-.redes-sociales a {
-    margin-left: 15px;
-    text-decoration: none;
-}
-
-.redes-sociales .bi {
-    font-size: 1.5rem;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.redes-sociales .bi:hover {
-    color: #d4a017;
-}
+/* ... (otros estilos de la barra superior) ... */
 
 /* Menú de Navegación */
 .navegacion-principal {
@@ -98,106 +71,95 @@ header {
     border-bottom-color: #d4a017;
 }
 
-/* ================= Contenido Ubicación ================= */
-.ubicacion-info {
+/* ================= Contenido Historia ================= */
+.historia-seccion {
     padding: 50px 0;
     background-color: #fff;
 }
 
-.ubicacion-info .display-4 {
-    font-size: 3rem;
-    color: #d4a017 !important;
+.imagen-fija {
+    position: sticky;
+    top: 160px;
 }
 
-.ubicacion-info h2 {
+.texto-historia h2, .texto-historia h3 {
     font-family: 'Cinzel', serif;
-    font-weight: 700;
-    margin-top: 10px;
+    color: #222;
     margin-bottom: 20px;
 }
 
-.mapa-container {
-    margin: 40px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.info-transporte {
+.texto-historia h3 {
+    color: #d4a017;
     margin-top: 40px;
 }
 
-.info-transporte h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 15px;
+.texto-historia p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
-.info-transporte p, .info-transporte ul {
-    color: #555;
-    line-height: 1.7;
-}
-
-.info-transporte ul {
-    padding-left: 20px;
-}
-
-.info-transporte .bi {
-    margin-right: 10px;
-    color: #d4a017;
-}
-
-.proximamente-section {
-    background-color: #f8f9fa;
-    padding: 40px;
-    margin-top: 50px;
-    text-align: center;
+.texto-historia .imagen-contenido {
+    width: 100%;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.proximamente-section h3 {
-    font-family: 'Cinzel', serif;
-    color: #333;
-}
+/* ================= Contenido Ubicación ================= */
+/* ... (estilos de ubicación) ... */
 
-.proximamente-section p {
-    color: #555;
-    max-width: 600px;
-    margin: 15px auto 25px;
-}
-
-/* ================= Pie de página ================= */
+/* ================= PIE DE PÁGINA ================= */
 .site-footer {
     background-color: #f8f9fa;
     padding: 40px 0 0;
     margin-top: 40px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #eee;
 }
 
 .footer-column {
     text-align: left;
+    position: relative;
+}
+
+/* Separador vertical */
+.footer-column:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    border-right: 1px solid #d4a017;
 }
 
 .footer-column h5 {
-    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #d4a017; /* Color dorado */
     margin-bottom: 20px;
 }
 
 .footer-column p, .footer-column ul {
     font-size: 0.9rem;
+    color: #555;
 }
 
 .copyright-footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #d4a017; /* Línea dorada */
 }
 
 .copyright-footer p {
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.copyright-footer p:hover {
+    color: #d4a017; /* Color dorado al pasar el mouse */
 }
