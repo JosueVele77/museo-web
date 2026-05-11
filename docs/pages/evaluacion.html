@@ -1,10 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación - Museo Nacional del Ecuador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
+<header>
+    <div class="barra-superior">
+        <div class="logo">
+            <h1>MUSEO NACIONAL DEL ECUADOR</h1>
+        </div>
+        <div class="utilidades">
+            <select class="selector-idioma">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+            <div class="redes-sociales">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navegacion-principal">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+            <li><a href="evaluacion.html" class="activo">Evaluación</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container my-5 evaluacion-seccion">
+    <div class="text-center mb-4" data-aos="fade-up">
+        <h2>Ponte a Prueba</h2>
+        <p class="lead text-muted">Responde estas 10 preguntas sobre nuestro museo.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <div class="mb-4" data-aos="fade-up">
+                <div class="d-flex justify-content-between mb-1">
+                    <span id="quiz-progress-text" class="fw-bold">Pregunta 1 de 10</span>
+                    <span id="quiz-progress-percent" class="text-muted small">0% completado</span>
+                </div>
+                <div class="progress" style="height: 10px;">
+                    <div id="quiz-progress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+            <div id="quiz-preguntas-container">
+
+                <div class="pregunta-item pregunta-card shadow-sm p-4 mb-4 bg-white" style="display:none;">
+                    <h5>1. ¿Durante qué gobierno llegó al Ecuador la misión económica estadounidense Kemmerer?</h5>
+                    <div class="opciones mt-3">
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">a) Eloy Alfaro</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="true">b) Dr. Isidro Ayora</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">c) Rafael Correa</button>
+                    </div>
+                    <div class="feedback mt-3 text-center" style="display: none;"></div>
+                </div>
+
+                <div class="pregunta-item pregunta-card shadow-sm p-4 mb-4 bg-white" style="display:none;">
+                    <h5>2. ¿Quién fue el primer museólogo ecuatoriano enviado a l’École du Louvre en París?</h5>
+                    <div class="opciones mt-3">
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="true">a) Hernán Crespo Toral</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">b) Julio Aráuz</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">c) Pedro Armillas</button>
+                    </div>
+                    <div class="feedback mt-3 text-center" style="display: none;"></div>
+                </div>
+
+                <div class="pregunta-item pregunta-card shadow-sm p-4 mb-4 bg-white" style="display:none;">
+                    <h5>3. ¿En qué edificio se encuentra ubicado actualmente el Museo Nacional?</h5>
+                    <div class="opciones mt-3">
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">a) Palacio de Carondelet</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">b) Edificio Matriz del Banco Central</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="true">c) Edificio de la Casa de la Cultura Ecuatoriana</button>
+                    </div>
+                    <div class="feedback mt-3 text-center" style="display: none;"></div>
+                </div>
+
+                <div class="pregunta-item pregunta-card shadow-sm p-4 mb-4 bg-white" style="display:none;">
+                    <h5>4. ¿En qué año se creó el Ministerio de Cultura, pasando a administrar el museo?</h5>
+                    <div class="opciones mt-3">
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">a) 1995</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="true">b) 2007</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">c) 2010</button>
+                    </div>
+                    <div class="feedback mt-3 text-center" style="display: none;"></div>
+                </div>
+
+                <div class="pregunta-item pregunta-card shadow-sm p-4 mb-4 bg-white" style="display:none;">
+                    <h5>5. ¿A qué calles debes dirigirte para visitar el museo en transporte público o privado?</h5>
+                    <div class="opciones mt-3">
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="true">a) Av. Patria, entre 6 de Diciembre y 12 de Octubre</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">b) Av. Amazonas y Naciones Unidas</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">c) Centro Histórico, Plaza Grande</button>
+                    </div>
+                    <div class="feedback mt-3 text-center" style="display: none;"></div>
+                </div>
+
+                <div class="pregunta-item pregunta-card shadow-sm p-4 mb-4 bg-white" style="display:none;">
+                    <h5>6. ¿De quién era la colección privada adquirida en 1960 que consolidó la idea de abrir el Museo?</h5>
+                    <div class="opciones mt-3">
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">a) Guillermo Pérez Chiriboga</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="true">b) Max Konanz</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">c) Enrique Tábara</button>
+                    </div>
+                    <div class="feedback mt-3 text-center" style="display: none;"></div>
+                </div>
+
+                <div class="pregunta-item pregunta-card shadow-sm p-4 mb-4 bg-white" style="display:none;">
+                    <h5>7. ¿Quién es la actual Directora Ejecutiva del Museo Nacional del Ecuador?</h5>
+                    <div class="opciones mt-3">
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">a) Érika Sylva</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">b) Yela Loffredo de Klein</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="true">c) Romina Muñoz Procel</button>
+                    </div>
+                    <div class="feedback mt-3 text-center" style="display: none;"></div>
+                </div>
+
+                <div class="pregunta-item pregunta-card shadow-sm p-4 mb-4 bg-white" style="display:none;">
+                    <h5>8. ¿Qué presidente inauguró las nuevas instalaciones del Museo Nacional en 1995?</h5>
+                    <div class="opciones mt-3">
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">a) Rodrigo Borja</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="true">b) Sixto Durán Ballén</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">c) Rafael Correa</button>
+                    </div>
+                    <div class="feedback mt-3 text-center" style="display: none;"></div>
+                </div>
+
+                <div class="pregunta-item pregunta-card shadow-sm p-4 mb-4 bg-white" style="display:none;">
+                    <h5>9. Según nuestro planifica tu visita, ¿cuál de las siguientes NO es una exposición permanente?</h5>
+                    <div class="opciones mt-3">
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">a) Sociedades Originarias</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">b) Arte Moderno y Contemporáneo</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="true">c) ‘Olga Dueñas. Una Retrospectiva’</button>
+                    </div>
+                    <div class="feedback mt-3 text-center" style="display: none;"></div>
+                </div>
+
+                <div class="pregunta-item pregunta-card shadow-sm p-4 mb-4 bg-white" style="display:none;">
+                    <h5>10. ¿Cuál es el horario de visitas para el día Domingo?</h5>
+                    <div class="opciones mt-3">
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">a) 10:00 a 17:00 (último ingreso 16h00)</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="true">b) 10:00 a 15:00 (último ingreso 14h00)</button>
+                        <button class="btn btn-outline-secondary w-100 mb-2 text-start opcion-btn" data-correcta="false">c) Cerrado por mantenimiento</button>
+                    </div>
+                    <div class="feedback mt-3 text-center" style="display: none;"></div>
+                </div>
+            </div>
+
+            <div class="text-end mt-3">
+                <button id="btn-siguiente" class="btn btn-primary px-4 py-2 shadow-sm" style="display: none;">
+                    Siguiente Pregunta <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+
+            <div id="resultado-container" class="shadow-sm text-center" style="display: none;">
+                <h2 class="mb-4">Resultados de la Evaluación</h2>
+                <div id="score-final"></div>
+                <div class="mt-4">
+                    <a href="evaluacion.html" class="btn btn-outline-primary"><i class="bi bi-arrow-counterclockwise"></i> Reintentar Evaluación</a>
+                    <a href="historia.html" class="btn btn-primary"><i class="bi bi-book"></i> Leer Historia</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-column">
+                <h5>Contacto</h5>
+                <p><strong>NÚMERO DE CONTACTO:</strong><br>+(593) 02 3814 550 Ext. 6010</p>
+                <p><strong>WhatsApp:</strong><br>0939520395</p>
+                <p><strong>PERSONA A CARGO:</strong><br>Romina Muñoz Procel, Directora Ejecutiva del Museo Nacional del Ecuador.</p>
+            </div>
+            <div class="col-md-4 footer-column">
+                <h5>Horarios</h5>
+                <p><strong>HORARIO DE VISITAS:</strong></p>
+                <ul class="list-unstyled">
+                    <li>Miércoles a sábado: 10:00 a 17:00 (último ingreso a las 16h00)</li>
+                    <li>Domingo: 10h00 a 15h00 (último ingreso a las 14h00)</li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-column">
+                <h5>Planifica tu visita</h5>
+                <p><strong>EXPOSICIONES PERMANENTES:</strong></p>
+                <ul class="list-unstyled">
+                    <li>Historia del Museo Nacional</li>
+                    <li>Conceptos Transversales</li>
+                    <li>Sociedades Originarias</li>
+                    <li>Colonia</li>
+                    <li>República</li>
+                    <li>Arte Moderno y Contemporáneo</li>
+                    <li>Metales (en construcción)</li>
+                </ul>
+                <p><strong>EXPOSICIONES TEMPORALES:</strong></p>
+                <ul class="list-unstyled">
+                    <li>‘Olga Dueñas. Una Retrospectiva’</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright-footer">
+            <p>2025 Museo Nacional del Ecuador© Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+</script>
+<script src="../js/scripts.js"></script>
 </body>
 </html>
