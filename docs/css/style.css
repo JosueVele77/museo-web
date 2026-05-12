@@ -108,14 +108,14 @@ body.dark-mode .opcion-btn:hover:not(:disabled) {
     color: #d4a017;
 }
 
-body.dark-mode .opcion-btn.correcta {
-    background-color: #198754 !important; /* Bootstrap success green */
+body.dark-mode .opcion-btn.btn-success {
+    background-color: #198754 !important;
     border-color: #198754 !important;
     color: white !important;
 }
 
-body.dark-mode .opcion-btn.incorrecta {
-    background-color: #dc3545 !important; /* Bootstrap danger red */
+body.dark-mode .opcion-btn.btn-danger {
+    background-color: #dc3545 !important;
     border-color: #dc3545 !important;
     color: white !important;
 }
@@ -137,6 +137,23 @@ body.dark-mode #score-final p {
 
 body.dark-mode .progress-bar {
     background-color: #d4a017;
+}
+
+/* Correcciones de visibilidad para la evaluación en modo oscuro */
+
+/* 1. Arregla el texto de la explicación (sobrescribe el .text-dark de Bootstrap) */
+body.dark-mode .feedback .text-dark {
+    color: #e0e0e0 !important;
+}
+
+/* 2. Aclara los textos opacos como el "0% completado", el subtítulo y el mensaje final */
+body.dark-mode .text-muted {
+    color: #adb5bd !important;
+}
+
+/* 3. Asegura que el indicador de "Pregunta 1 de 10" resalte correctamente */
+body.dark-mode #quiz-progress-text {
+    color: #e0e0e0;
 }
 
 /* ================= ENCABEZADO ================= */
