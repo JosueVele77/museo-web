@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museo Nacional del Ecuador</title>
+    <title data-key="titulo">Museo Nacional del Ecuador</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/language-selector.css">
 </head>
 <body>
 
@@ -21,17 +22,27 @@
     <!-- Barra superior (Logo y utilidades) -->
     <div class="barra-superior">
         <div class="logo">
-            <h1>MUSEO NACIONAL DEL ECUADOR</h1>
+            <h1 data-key="h1_logo">MUSEO NACIONAL DEL ECUADOR</h1>
         </div>
 
         <div class="utilidades">
-            <select class="selector-idioma">
-                <option value="es">Español</option>
-                <option value="en">English</option>
-            </select>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="bi bi-moon-stars-fill"></i>
+                <i class="bi bi-sun-fill"></i>
+            </button>
+            <div class="selector-idioma">
+                <div class="idioma-actual">
+                    <span class="bandera" id="bandera-actual">🇪🇨</span>
+                    <span id="idioma-actual-texto">Español</span>
+                </div>
+                <ul class="lista-idiomas">
+                    <li><a href="#" data-lang="es"><span class="bandera">🇪🇨</span> Español</a></li>
+                    <li><a href="#" data-lang="en"><span class="bandera">🇺🇸</span> English</a></li>
+                </ul>
+            </div>
             <div class="redes-sociales">
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/MuseoNacionalEcuador" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/museonacionalecuador/" target="_blank"><i class="bi bi-instagram"></i></a>
             </div>
         </div>
     </div>
@@ -39,10 +50,10 @@
     <!-- Menú de navegación -->
     <nav class="navegacion-principal">
         <ul>
-            <li><a href="index.html" class="activo">Inicio</a></li>
-            <li><a href="pages/historia.html">Historia</a></li>
-            <li><a href="pages/ubicacion.html">Ubicación</a></li>
-            <li><a href="pages/evaluacion.html">Evaluación </a></li>
+            <li><a href="index.html" class="activo" data-key="nav_inicio">Inicio</a></li>
+            <li><a href="pages/historia.html" data-key="nav_historia">Historia</a></li>
+            <li><a href="pages/ubicacion.html" data-key="nav_ubicacion">Ubicación</a></li>
+            <li><a href="pages/evaluacion.html" data-key="nav_evaluacion">Evaluación </a></li>
         </ul>
     </nav>
 </header>
@@ -92,44 +103,44 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 footer-column">
-                <h5>Contacto</h5>
-                <p><strong>Número de Contacto:</strong><br>+(593) 02 3814 550 Ext. 6010</p>
-                <p><strong>WhatsApp:</strong><br>0939520395</p>
-                <p><strong>Persona a cargo:</strong><br>Romina Muñoz Procel, Directora Ejecutiva del Museo Nacional del Ecuador.</p>
+                <h5 data-key="footer_contacto_h5">Contacto</h5>
+                <p data-key="footer_contacto_p1"><strong>Número de Contacto:</strong><br>+(593) 02 3814 550 Ext. 6010</p>
+                <p data-key="footer_contacto_p2"><strong>WhatsApp:</strong><br>0939520395</p>
+                <p data-key="footer_contacto_p3"><strong>Persona a cargo:</strong><br>Romina Muñoz Procel, Directora Ejecutiva del Museo Nacional del Ecuador.</p>
             </div>
             <div class="col-md-4 footer-column">
-                <h5>Horarios</h5>
-                <p><strong>Horario de Visitas:</strong></p>
+                <h5 data-key="footer_horarios_h5">Horarios</h5>
+                <p data-key="footer_horarios_p1"><strong>Horario de Visitas:</strong></p>
                 <ul class="list-unstyled">
-                    <li>Miércoles a sábado: 10:00 a 17:00 (último ingreso a las 16h00)</li>
-                    <li>Domingo: 10h00 a 15h00 (último ingreso a las 14h00)</li>
+                    <li data-key="footer_horarios_li1">Miércoles a sábado: 10:00 a 17:00 (último ingreso a las 16h00)</li>
+                    <li data-key="footer_horarios_li2">Domingo: 10h00 a 15h00 (último ingreso a las 14h00)</li>
                 </ul>
             </div>
             <div class="col-md-4 footer-column">
-                <h5>Planifica tu visita</h5>
-                <p><strong>Exposiciones Permanentes:</strong></p>
+                <h5 data-key="footer_planifica_h5">Planifica tu visita</h5>
+                <p data-key="footer_planifica_p1"><strong>Exposiciones Permanentes:</strong></p>
                 <ul class="list-unstyled">
-                    <li>Historia del Museo Nacional</li>
-                    <li>Conceptos Transversales</li>
-                    <li>Sociedades Originarias</li>
-                    <li>Colonia</li>
-                    <li>República</li>
-                    <li>Arte Moderno y Contemporáneo</li>
-                    <li>Metales (en construcción)</li>
+                    <li data-key="footer_planifica_li1">Historia del Museo Nacional</li>
+                    <li data-key="footer_planifica_li2">Conceptos Transversales</li>
+                    <li data-key="footer_planifica_li3">Sociedades Originarias</li>
+                    <li data-key="footer_planifica_li4">Colonia</li>
+                    <li data-key="footer_planifica_li5">República</li>
+                    <li data-key="footer_planifica_li6">Arte Moderno y Contemporáneo</li>
+                    <li data-key="footer_planifica_li7">Metales (en construcción)</li>
                 </ul>
-                <p><strong>Exposiciones Temporales:</strong></p>
+                <p data-key="footer_planifica_p2"><strong>Exposiciones Temporales:</strong></p>
                 <ul class="list-unstyled">
-                    <li>‘Olga Dueñas. Una Retrospectiva’</li>
+                    <li data-key="footer_planifica_li8">‘Olga Dueñas. Una Retrospectiva’</li>
                 </ul>
             </div>
         </div>
         <div class="copyright-footer">
-            <p>2025 Museo Nacional del Ecuador© Todos los derechos reservados.</p>
+            <p data-key="footer_copyright">2025 Museo Nacional del Ecuador© Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+<script type="module" src="js/scripts.js"></script>
 </body>
 </html>

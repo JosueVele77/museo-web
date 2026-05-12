@@ -3,6 +3,140 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
     background-color: #f9f9f9;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ================= DARK MODE ================= */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+    border-bottom-color: #333;
+}
+
+body.dark-mode .logo h1,
+body.dark-mode .navegacion-principal a,
+body.dark-mode .redes-sociales a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .navegacion-principal a:hover,
+body.dark-mode .navegacion-principal a.activo,
+body.dark-mode .redes-sociales a:hover,
+body.dark-mode .logo h1:hover {
+    color: #d4a017;
+}
+
+body.dark-mode .selector-idioma {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark-mode .site-footer {
+    background-color: #1e1e1e;
+    border-top-color: #d4a017;
+}
+
+body.dark-mode .footer-column p,
+body.dark-mode .footer-column ul,
+body.dark-mode .copyright-footer p {
+    color: #aaa;
+}
+
+body.dark-mode .historia-seccion,
+body.dark-mode .evaluacion-seccion {
+    background-color: #121212;
+}
+
+body.dark-mode .pregunta-card,
+body.dark-mode #resultado-container {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .texto-historia h2,
+body.dark-mode .texto-historia h3,
+body.dark-mode .texto-historia p,
+body.dark-mode .pregunta-card h5,
+body.dark-mode .lead {
+    color: #e0e0e0;
+}
+
+body.dark-mode .info-box {
+    background-color: #2c2c2c;
+    border-left-color: #d4a017;
+}
+
+body.dark-mode .info-box a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .opcion-btn {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark-mode .opcion-btn:hover:not(:disabled) {
+    background-color: #3c3c3c;
+    border-color: #d4a017;
+    color: #d4a017;
+}
+
+/* Dark mode for quiz specific elements */
+body.dark-mode .pregunta-card {
+    background-color: #1e1e1e !important;
+    border-left-color: #d4a017;
+}
+
+body.dark-mode .pregunta-card h5 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .opcion-btn {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark-mode .opcion-btn:hover:not(:disabled) {
+    background-color: #3c3c3c;
+    border-color: #d4a017;
+    color: #d4a017;
+}
+
+body.dark-mode .opcion-btn.correcta {
+    background-color: #198754 !important; /* Bootstrap success green */
+    border-color: #198754 !important;
+    color: white !important;
+}
+
+body.dark-mode .opcion-btn.incorrecta {
+    background-color: #dc3545 !important; /* Bootstrap danger red */
+    border-color: #dc3545 !important;
+    color: white !important;
+}
+
+body.dark-mode .feedback {
+    color: #e0e0e0; /* Adjust feedback text color for dark mode */
+}
+
+body.dark-mode #resultado-container {
+    background-color: #1e1e1e !important;
+    border-top-color: #d4a017;
+}
+
+body.dark-mode #resultado-container h2,
+body.dark-mode #score-final h3,
+body.dark-mode #score-final p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .progress-bar {
+    background-color: #d4a017;
 }
 
 /* ================= ENCABEZADO ================= */
@@ -13,6 +147,7 @@ header {
     top: 0;
     z-index: 1030;
     border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
 }
 
 /* Barra Superior */
@@ -37,12 +172,58 @@ header {
     color: #d4a017;
 }
 
-/* ... (otros estilos de la barra superior) ... */
+.utilidades {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre utilidades */
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle .bi-sun-fill {
+    display: none;
+}
+
+body.dark-mode .theme-toggle .bi-moon-stars-fill {
+    display: none;
+}
+
+body.dark-mode .theme-toggle .bi-sun-fill {
+    display: inline;
+    color: #e0e0e0;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 18px; /* Espacio entre iconos de redes */
+}
+
+.redes-sociales a {
+    font-size: 1.3rem; /* Tamaño de los iconos */
+    color: #333; /* Color por defecto */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: #d4a017; /* Color dorado al pasar el mouse */
+    transform: scale(1.1); /* Efecto de zoom sutil */
+}
 
 /* Menú de Navegación */
 .navegacion-principal {
     padding: 5px 0;
     border-top: 1px solid #eee;
+    transition: border-color 0.3s;
 }
 
 .navegacion-principal ul {
@@ -109,17 +290,16 @@ header {
 }
 
 .info-box {
-    background-color: #fdfdfd; /* Un blanco roto muy sutil */
-    border-left: 4px solid #d4a017; /* El grosor dorado de la izquierda */
+    background-color: #fdfdfd;
+    border-left: 4px solid #d4a017;
     padding: 15px 20px;
     margin-top: 30px;
     display: flex;
-    align-items: center; /* Alineación vertical perfecta */
+    align-items: center;
     gap: 12px;
-    border-radius: 0px; /* Bordes rectos como en la web oficial */
+    border-radius: 0px;
 }
 
-/* Estilo específico para el icono de Bootstrap */
 .info-box i.bi-info-circle {
     font-size: 1.4rem;
     color: #d4a017;
@@ -130,8 +310,8 @@ header {
 .info-box a {
     text-decoration: none;
     color: #333;
-    font-weight: 700; /* Texto en negrita para resaltar */
-    font-family: 'Arial', sans-serif; /* O la fuente que estés usando */
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
     font-size: 0.95rem;
     transition: color 0.2s ease;
 }
@@ -152,7 +332,8 @@ header {
     background-color: #f8f9fa;
     padding: 40px 0 0;
     margin-top: 40px;
-    border-top: 1px solid #eee;
+    border-top: 2px solid #d4a017;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .footer-column {
@@ -160,7 +341,6 @@ header {
     position: relative;
 }
 
-/* Separador vertical */
 .footer-column:not(:last-child)::after {
     content: '';
     position: absolute;
@@ -173,20 +353,22 @@ header {
 .footer-column h5 {
     font-family: 'Cinzel', serif;
     font-weight: 700;
-    color: #d4a017; /* Color dorado */
+    color: #d4a017;
     margin-bottom: 20px;
 }
 
 .footer-column p, .footer-column ul {
     font-size: 0.9rem;
     color: #555;
+    transition: color 0.3s;
 }
 
 .copyright-footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
-    border-top: 1px solid #d4a017; /* Línea dorada */
+    border-top: 1px solid #d4a017;
+    transition: border-color 0.3s;
 }
 
 .copyright-footer p {
@@ -197,7 +379,7 @@ header {
 }
 
 .copyright-footer p:hover {
-    color: #d4a017; /* Color dorado al pasar el mouse */
+    color: #d4a017;
 }
 
 /* ================= ESTILOS EVALUACIÓN ================= */
@@ -208,7 +390,7 @@ header {
 
 .pregunta-card {
     border-left: 5px solid #d4a017;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
     animation: fadeIn 0.5s ease;
 }
 
@@ -246,13 +428,13 @@ header {
     animation: fadeIn 0.5s ease;
 }
 
-/* Contenedor de resultados */
 #resultado-container {
     background-color: #fff;
     border-top: 5px solid #d4a017;
     padding: 40px;
     border-radius: 8px;
     animation: fadeIn 0.8s ease;
+    transition: background-color 0.3s;
 }
 
 @keyframes fadeIn {
@@ -260,7 +442,6 @@ header {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Barra de progreso */
 .progress-bar {
     background-color: #d4a017;
     transition: width 0.5s ease;
